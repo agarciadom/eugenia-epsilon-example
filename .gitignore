@@ -1,0 +1,10 @@
+src
+bin
+META-INF
+plugin.xml
+*.ecore
+*.gmf*
+*.genmodel
+*.trace
+*.diagram/
+*.properties
