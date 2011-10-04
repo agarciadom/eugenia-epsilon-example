@@ -1,0 +1,34 @@
+@namespace(uri="librodsdm/diagramaflujo", prefix="dsdmdf")
+@gmf(foo="bar")
+package diagramaflujo;
+
+@gmf.diagram(foo="bar")
+class Diagrama {
+   val Nodo[*]   nodos;
+   val Arista[*] aristas;
+}
+
+@gmf.node(label="nombre",
+          label.icon="false",
+          figure="polygon",
+          polygon.x="20 40 20  0",
+          polygon.y=" 0 20 40 20")
+class Nodo {
+   attr String nombre;
+   ref Arista[*]#origen  salientes;
+   ref Arista[*]#destino entrantes;
+}
+
+@gmf.node(label.readOnly="true", shape="svg", svg.url="platform:/plugin/dsdm.eugenia/icons/sleep.svg")
+class Retraso extends Nodo {}
+
+@gmf.link(source="origen", target="destino", target.decoration="arrow")
+class Arista {
+   ref Nodo#salientes origen;
+   ref Nodo#entrantes destino;
+}
+
+class Subdiagrama extends Nodo {
+   @gmf.compartment(foo="bar")
+   val Nodo[*] subdiag;
+}
