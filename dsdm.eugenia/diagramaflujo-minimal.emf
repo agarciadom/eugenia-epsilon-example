@@ -1,0 +1,37 @@
+@namespace(uri="librodsdm/diagramaflujo", prefix="dsdmdf")
+@gmf(foo="bar")
+package diagramaflujo;
+
+@gmf.diagram(foo="bar")
+class Diagrama {
+   val Nodo[*]   nodos;
+   val Arista[*] aristas;
+}
+
+@gmf.node(foo="bar")
+class Nodo {
+   ref Arista[*]#origen  salientes;
+   ref Arista[*]#destino entrantes;
+}
+
+@gmf.node(label="nombre")
+class Actividad extends Nodo {
+   attr String nombre;
+
+   @gmf.compartment(foo="bar")
+   val Nodo[*] subdiag;
+}
+
+class Decision extends Nodo {}
+class Ramificacion extends Nodo {}
+class NodoInicial extends Nodo {}
+class NodoFinal extends Nodo {}
+
+/* ARISTAS */
+
+@gmf.link(label="nombre", source="origen", target="destino")
+class Arista {
+   attr String nombre;
+   ref Nodo[1]#salientes origen;
+   ref Nodo[1]#entrantes destino;
+}
