@@ -11,12 +11,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="27.125439"
    height="27.125439"
-   id="svg3017"
+   id="svg2"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="Nuevo documento 4">
+   sodipodi:docname="Nuevo documento 1">
   <defs
-     id="defs3019" />
+     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="-8.5032354"
-     inkscape:cy="13.264493"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="123.16576"
+     inkscape:cy="-64.779059"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -40,7 +40,7 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata3022">
+     id="metadata7">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -55,7 +55,7 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-263.58013,-478.79947)">
+     transform="translate(-91.428577,-136.66532)">
     <path
        sodipodi:type="arc"
        style="opacity:0.87999998;fill:#000000;fill-opacity:1;stroke:none"
@@ -64,27 +64,7 @@
        sodipodi:cy="120.93361"
        sodipodi:rx="42.857143"
        sodipodi:ry="42.857143"
-       d="m 177.14286,120.93361 a 42.857143,42.857143 0 1 1 -85.714283,0 42.857143,42.857143 0 1 1 85.714283,0 z"
-       transform="matrix(0.31646345,0,0,0.31646345,234.64633,454.09112)" />
-    <path
-       sodipodi:type="arc"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000"
-       id="path2985-5"
-       sodipodi:cx="134.28572"
-       sodipodi:cy="120.93361"
-       sodipodi:rx="42.857143"
-       sodipodi:ry="42.857143"
-       d="m 177.14286,120.93361 a 42.857143,42.857143 0 1 1 -85.714283,0 42.857143,42.857143 0 1 1 85.714283,0 z"
-       transform="matrix(0.26806971,0,0,0.26806971,241.14492,459.94355)" />
-    <path
-       sodipodi:type="arc"
-       style="opacity:0.87999998;fill:#000000;fill-opacity:1;stroke:none"
-       id="path2985-7"
-       sodipodi:cx="134.28572"
-       sodipodi:cy="120.93361"
-       sodipodi:rx="42.857143"
-       sodipodi:ry="42.857143"
-       d="m 177.14286,120.93361 a 42.857143,42.857143 0 1 1 -85.714283,0 42.857143,42.857143 0 1 1 85.714283,0 z"
-       transform="matrix(0.18729678,0,0,0.18729678,251.99157,469.71171)" />
+       d="m 177.14286,120.93361 c 0,23.66935 -19.18779,42.85714 -42.85714,42.85714 -23.66935,0 -42.857143,-19.18779 -42.857143,-42.85714 0,-23.669348 19.187793,-42.857144 42.857143,-42.857144 23.66935,0 42.85714,19.187796 42.85714,42.857144 z"
+       transform="matrix(0.31646345,0,0,0.31646345,62.494774,111.95697)" />
   </g>
 </svg>
