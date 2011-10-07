@@ -50,6 +50,6 @@ class NodoFinal extends Nodo {}
 @gmf.link(label="nombre", source="origen", target="destino", target.decoration="arrow", tool.description="Añade una arista entre dos nodos")
 class Arista {
    attr String nombre;
-   ref Nodo#salientes origen;
-   ref Nodo#entrantes destino;
+   ref Nodo[1]#salientes origen;
+   ref Nodo[1]#entrantes destino;
 }
