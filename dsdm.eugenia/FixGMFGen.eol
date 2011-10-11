@@ -1,0 +1,22 @@
+var genPlugin := GmfGen!GenPlugin.all.first;
+genPlugin.name := 'Plugin para Diagramas de Flujo';
+genPlugin.provider := 'Libro DSDM';
+
+GmfGen!GenStandardPreferencePage.all.first.name := 'Diagramas de Flujo';
+GmfGen!GenEditorGenerator.all.first.modelID := 'Diagrama de Flujo';
+
+for (n in Sequence {'NodoInicialFigure', 'NodoFinalFigure', 'DecisionFigure', 'RamificacionFigure'}) {
+  makeNotResizable(n);
+}
+
+operation makeNotResizable(figureClass : String) {
+  var figure_viewmaps = GmfGen!InnerClassViewmap.all.select(r|r.className = figureClass);
+
+  for (figure_viewmap in figure_viewmaps) {
+    -- Add resize constraint forbidding resizing
+    -- NORTH (1), SOUTH (4), EAST (8) and WEST (16): all handles are not resizable
+    var resizeconstraint_not_resizable = new GmfGen!ResizeConstraints;
+    resizeconstraint_not_resizable.nonResizeHandles := 31;
+    figure_viewmap.attributes.add(resizeconstraint_not_resizable);	
+  }	
+}
