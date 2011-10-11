@@ -10,9 +10,16 @@ class Diagrama {
 
 /* NODOS */
 
-class Nodo {
+abstract class Nodo {
    ref Arista[*]#origen  salientes;
    ref Arista[*]#destino entrantes;
+}
+
+@gmf.link(label="nombre", source="origen", target="destino", target.decoration="arrow", tool.description="Añade una arista entre dos nodos")
+class Arista {
+   attr String nombre;
+   ref Nodo[1]#salientes origen;
+   ref Nodo[1]#entrantes destino;
 }
 
 @gmf.node(label="nombre", label.icon="false", tool.description="Añade una actividad, que puede contener subactividades")
@@ -36,20 +43,11 @@ class Decision extends Nodo {}
 class Ramificacion extends Nodo {}
 
 @gmf.node(label.placement="none",
-          figure="svg", svg.uri="platform:/plugin/dsdm.eugenia/icons/nodo-inicial.svg",
+          figure="svg", svg.uri="platform:/plugin/dsdm.eugenia/iconos/nodo-inicial.svg",
           tool.name="Nodo inicial", tool.description="Añade un nodo por el que comienza la ejecución de las actividades o subactividades")
 class NodoInicial extends Nodo {}
 
 @gmf.node(label.placement="none",
-          figure="svg", svg.uri="platform:/plugin/dsdm.eugenia/icons/nodo-final.svg",
+          figure="svg", svg.uri="platform:/plugin/dsdm.eugenia/iconos/nodo-final.svg",
           tool.name="Nodo final", tool.description="Añade un nodo por el que termina la ejecución de las actividades o subactividades")
 class NodoFinal extends Nodo {}
-
-/* ARISTAS */
-
-@gmf.link(label="nombre", source="origen", target="destino", target.decoration="arrow", tool.description="Añade una arista entre dos nodos")
-class Arista {
-   attr String nombre;
-   ref Nodo[1]#salientes origen;
-   ref Nodo[1]#entrantes destino;
-}

@@ -1,0 +1,5 @@
+<project default="generate-editor">
+  <target name="generate-editor">
+  	<epsilon.eugenia src="diagramaflujo.emf"/>
+  </target>
+</project>
